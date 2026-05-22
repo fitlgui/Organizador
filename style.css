@@ -1,0 +1,594 @@
+/* --- 1. CONFIGURAÇÕES GERAIS --- */
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #1C1C1E; 
+    color: #e0e0e0; 
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: white;
+}
+
+/* --- 2. CABEÇALHO --- */
+.Cabecario {
+    background-color: #1C1C1E; 
+    padding: 10px 20px; 
+    display: flex;          
+    align-items: center;    
+    justify-content: space-between; 
+    border-bottom: 1px solid #38383a; 
+    color: white;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 70px; 
+    width: auto; 
+    transition: 0.2s;
+    max-height: 100%; 
+}
+
+.logo-img:hover {
+    opacity: 0.8; 
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}
+
+#Menu ul {
+    display: flex;          
+    list-style: none;       
+    margin: 0;
+    padding: 0;
+    gap: 20px;              
+}
+
+#Menu a {
+    color: #b6c2cf; 
+    text-decoration: none;  
+    font-weight: bold;
+    font-size: 14px; 
+    transition: 0.3s;       
+}
+
+#Menu a:hover {
+    color: white; 
+}
+
+.perfil-btn {
+    background-color: #d94a38; 
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.perfil-btn:hover {
+    opacity: 0.8; 
+}
+
+/* --- 3. DASHBOARD (HOME) --- */
+.dashboard {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.secao-dashboard { margin-bottom: 50px; }
+
+.cabecalho-secao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cabecalho-secao h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.subtitulo-secao {
+    color: #8c9bab;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.grid-cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.cartao-tl {
+    background-color: #22272b; 
+    border-radius: 8px;
+    overflow: hidden; 
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cartao-tl:hover {
+    background-color: #2c3338; 
+    transform: translateY(-3px); 
+}
+
+.capa-cartao {
+    height: 90px;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: flex-end;
+}
+
+.gradiente-1 { background: linear-gradient(to right, #0079bf, #5aac44); }
+.gradiente-2 { background: linear-gradient(to right, #89609e, #cd5a91); }
+
+.info-cartao {
+    padding: 15px;
+    color: #b6c2cf;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cartao-tl:hover .info-cartao { color: white; }
+
+/* --- 4. DOCUMENTOS --- */
+.container-docs {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 30px;
+    align-items: flex-start; 
+}
+
+.sidebar-docs {
+    width: 250px;
+    background-color: #22272b; 
+    padding: 20px;
+    border-radius: 8px;
+    position: sticky; 
+    top: 20px;
+}
+
+.sidebar-docs h3 {
+    margin-top: 0;
+    font-size: 16px;
+    border-bottom: 1px solid #38383a;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.sidebar-docs ul { list-style: none; padding: 0; margin: 0; }
+.sidebar-docs li { margin-bottom: 10px; }
+
+.sidebar-docs a {
+    color: #b6c2cf;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.sidebar-docs a:hover {
+    background-color: #2c3338;
+    color: white;
+}
+
+.conteudo-docs {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+.barra-pesquisa {
+    display: flex;
+    gap: 15px;
+}
+
+.barra-pesquisa input {
+    flex: 1;
+    background-color: #22272b;
+    border: 1px solid #38383a;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.barra-pesquisa input:focus {
+    outline: none;
+    border-color: #0079bf; 
+}
+
+.btn-primario {
+    background-color: #0079bf; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-primario:hover { background-color: #026aa7; }
+
+.btn-secundario {
+    background-color: transparent;
+    color: #b6c2cf;
+    border: 1px solid #38383a;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-secundario:hover {
+    background-color: #22272b;
+    color: white;
+}
+
+.bloco-docs {
+    background-color: #22272b;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.bloco-docs h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.tabela-docs {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela-docs th, .tabela-docs td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #38383a;
+}
+
+.tabela-docs th {
+    color: #8c9bab;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tabela-docs tbody tr {
+    cursor: pointer;
+}
+
+.tabela-docs tbody tr:hover {
+    background-color: #2c3338;
+}
+
+.editor-docs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-titulo {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #38383a;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.input-titulo:focus { outline: none; border-color: #0079bf; }
+
+.input-texto {
+    background-color: #1C1C1E; 
+    border: 1px solid #38383a;
+    border-radius: 4px;
+    color: #e0e0e0;
+    padding: 15px;
+    font-size: 16px;
+    min-height: 250px; 
+    resize: vertical; 
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.input-texto:focus { outline: none; border-color: #0079bf; }
+
+.editor-acoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* --- 5. KANBAN (PROJETOS) E MÚLTIPLOS QUADROS --- */
+.kanban-container {
+    padding: 20px 40px;
+    height: auto; 
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+}
+
+.acoes-globais {
+    margin-bottom: 20px;
+    text-align: right; 
+}
+
+.linha-separadora {
+    border: none;
+    border-top: 2px solid #38383a;
+    margin: 40px 0; 
+}
+
+.kanban-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.kanban-cabecalho h2 { margin: 0; font-size: 24px; }
+
+.kanban-board {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; 
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.kanban-coluna {
+    background-color: #101214; 
+    border-radius: 12px;
+    width: 280px; 
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    max-height: 100%;
+}
+
+.coluna-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px 15px 8px;
+}
+
+.coluna-cabecalho h3 { margin: 0; font-size: 14px; color: #b6c2cf; }
+
+.contador-tarefas {
+    background-color: #22272b;
+    color: #b6c2cf;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.kanban-cartoes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto; 
+    min-height: 10px;
+}
+
+.kanban-cartao {
+    background-color: #22272b; 
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(9, 30, 66, 0.25); 
+    transition: background-color 0.2s;
+    border: 1px solid transparent;
+}
+
+.kanban-cartao:hover {
+    background-color: #2c3338;
+    border-color: #38383a;
+}
+
+.cartao-titulo {
+    color: #e0e0e0;
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.cartao-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.cartao-data {
+    font-size: 12px;
+    color: #8c9bab;
+    background-color: #1C1C1E;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.perfil-btn.miniatura {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+}
+
+.btn-add-cartao {
+    background: transparent;
+    border: none;
+    color: #b6c2cf;
+    text-align: left;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-add-cartao:hover { background-color: #2c3338; color: #e0e0e0; }
+
+/* --- 6. PÁGINA DE LOGIN --- */
+.pagina-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1C1C1E; 
+}
+
+.login-box {
+    background-color: #22272b; 
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    max-width: 400px; 
+    text-align: center;
+}
+
+.logo-login { height: 50px; margin-bottom: 20px; }
+.login-box h2 { margin: 0 0 5px 0; font-size: 24px; }
+.login-subtitulo { color: #8c9bab; font-size: 14px; margin-bottom: 30px; }
+.grupo-input { text-align: left; margin-bottom: 20px; }
+
+.grupo-input label {
+    display: block;
+    color: #b6c2cf;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-login {
+    width: 100%;
+    background-color: #101214; 
+    border: 1px solid #38383a;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.input-login:focus {
+    outline: none;
+    border-color: #0079bf; 
+    background-color: #1C1C1E;
+}
+
+.btn-login { width: 100%; padding: 14px; font-size: 16px; margin-top: 10px; }
+.login-rodape { margin-top: 25px; font-size: 14px; }
+.login-rodape a { color: #0079bf; text-decoration: none; transition: 0.2s; }
+.login-rodape a:hover { color: #579dff; text-decoration: underline; }
+
+/* --- 7. GRUPO DE PERFIL E BOTÃO SAIR --- */
+.grupo-perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.btn-sair {
+    color: #8c9bab; 
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #38383a; 
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.2s; 
+}
+
+.btn-sair:hover {
+    background-color: #d94a38; 
+    color: white;
+    border-color: #d94a38;
+}
+
+/* --- 11. BOTÃO DE APAGAR QUADRO --- */
+.btn-apagar-quadro {
+    background: transparent;
+    border: 1px solid #38383a;
+    color: #8c9bab;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-apagar-quadro:hover {
+    background-color: #d94a38; /* Vermelho alerta */
+    border-color: #d94a38;
+    color: white;
+}
+
+.btn-drive:hover {
+    background-color: #2d8e47;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- ESTILO DO BOTÃO GOOGLE DRIVE (BARRA SUPERIOR) --- */
+.btn-drive-topo {
+    background-color: #34a853;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.btn-drive-topo:hover {
+    background-color: #2d8e47;
+}

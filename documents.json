@@ -1,0 +1,20 @@
+[
+    {
+        "titulo": "Ata de Reunião - Chassi",
+        "autor": "JF",
+        "data": "02/05/2026",
+        "conteudo": "Nesta reunião, a equipe decidiu utilizar motores NEO para a tração e montar o chassi em formato U para facilitar a coleta das peças no campo."
+    },
+    {
+        "titulo": "Lógica da Câmera (Autônomo)",
+        "autor": "SY",
+        "data": "28/04/2026",
+        "conteudo": "A câmera será posicionada a 30cm do chão, angulada em 15 graus para cima. O código vai usar a biblioteca PhotonVision para detectar as AprilTags e alinhar o robô automaticamente."
+    },
+    {
+        "titulo": "Lista de Peças do Robô",
+        "autor": "JF",
+        "data": "20/04/2026",
+        "conteudo": "- 4x Motores NEO\n- 4x Spark Max\n- 1x RoboRIO 2.0\n- Perfis de alumínio 2x1"
+    }
+]
